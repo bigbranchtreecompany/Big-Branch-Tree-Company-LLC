@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Big Branch Tree Company LLC | Tree Removal, Trimming & Storm Damage — Green Ridge, Sedalia, MO</title>
+<meta name="description" content="Family-owned tree service in Green Ridge, Sedalia, MO. Tree removal, tree trimming, storm damage cleanup & tree care. Free estimates within 25 miles. Call (660) 221-3361." />
+<link rel="icon" href="https://irp.cdn-website.com/436a5504/dms3rep/multi/opt/bigbranchtreecompany_logo-1920w.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bark:#141d16;
+    --forest:#1f3326;
+    --forest-2:#25402d;
+    --moss:#5c7a5b;
+    --moss-light:#8ba687;
+    --timber:#c88a4a;
+    --timber-light:#e0ab6f;
+    --cream:#f6f1e6;
+    --cream-dim:#e8e0cf;
+    --line:rgba(246,241,230,0.14);
+    --shadow:0 20px 50px -20px rgba(10,14,10,0.5);
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Inter',sans-serif;
+    background:var(--cream);
+    color:var(--bark);
+    overflow-x:hidden;
+    line-height:1.6;
+  }
+  ::selection{ background:var(--timber); color:var(--bark); }
+  ::-moz-selection{ background:var(--timber); color:var(--bark); }
+
+  h1,h2,h3,h4{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    line-height:1.12;
+    letter-spacing:-0.01em;
+    color:var(--forest);
+  }
+  .eyebrow{
+    font-family:'Sora',sans-serif;
+    font-size:0.72rem;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--timber);
+    font-weight:600;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:26px; height:1px;
+    background:var(--timber);
+    display:inline-block;
+  }
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  button{font-family:inherit; cursor:pointer;}
+
+  .wrap{ max-width:1200px; margin:0 auto; padding:0 28px; }
+  .btn{
+    display:inline-flex; align-items:center; gap:10px;
+    padding:15px 30px;
+    border-radius:2px;
+    font-family:'Sora',sans-serif;
+    font-size:0.82rem;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    font-weight:600;
+    border:1px solid transparent;
+    transition:all .35s ease;
+  }
+  .btn-primary{ background:var(--timber); color:var(--bark); }
+  .btn-primary:hover{ background:var(--timber-light); transform:translateY(-2px); }
+  .btn-outline{ border-color:rgba(246,241,230,0.5); color:var(--cream); }
+  .btn-outline:hover{ background:rgba(246,241,230,0.1); border-color:var(--cream); }
+  .btn-dark{ background:var(--forest); color:var(--cream); }
+  .btn-dark:hover{ background:var(--bark); transform:translateY(-2px); }
+
+  /* ============ PRELOADER ============ */
+  #preloader{
+    position:fixed; inset:0; z-index:9999;
+    background:var(--bark);
+    display:flex; align-items:center; justify-content:center;
+    flex-direction:column;
+    transition:opacity .8s ease, visibility .8s ease;
+  }
+  #preloader.hide{ opacity:0; visibility:hidden; pointer-events:none; }
+  .ring-loader{ position:relative; width:150px; height:150px; display:flex; align-items:center; justify-content:center; }
+  .ring-loader svg{ position:absolute; inset:0; width:100%; height:100%; transform:rotate(-90deg); }
+  .ring-loader circle{
+    fill:none; stroke-width:1.4;
+    stroke-dasharray:440;
+    stroke-dashoffset:440;
+    animation:ringDraw 1.6s cubic-bezier(.65,0,.35,1) forwards;
+  }
+  .ring-loader circle:nth-child(1){ stroke:var(--moss); animation-delay:.05s; }
+  .ring-loader circle:nth-child(2){ stroke:var(--timber); animation-delay:.3s; }
+  .ring-loader circle:nth-child(3){ stroke:var(--cream-dim); animation-delay:.55s; opacity:.6; }
+  @keyframes ringDraw{ to{ stroke-dashoffset:0; } }
+  .loader-logo{
+    width:52px; height:52px; object-fit:contain;
+    opacity:0; animation:logoPop .6s ease forwards .9s;
+    filter: drop-shadow(0 0 12px rgba(200,138,74,0.35));
+  }
+  @keyframes logoPop{ from{opacity:0; transform:scale(.6);} to{opacity:1; transform:scale(1);} }
+  .loader-text{
+    margin-top:26px; text-align:center;
+    opacity:0; animation:textUp .7s ease forwards 1.15s;
+  }
+  @keyframes textUp{ from{opacity:0; transform:translateY(12px);} to{opacity:1; transform:translateY(0);} }
+  .loader-text .name{
+    font-family:'Fraunces',serif; color:var(--cream);
+    font-size:1.4rem; letter-spacing:.02em;
+  }
+  .loader-text .tag{
+    font-family:'Sora',sans-serif; color:var(--moss-light);
+    font-size:.68rem; letter-spacing:.3em; text-transform:uppercase;
+    margin-top:6px;
+  }
+  .loader-bar{
+    width:180px; height:1px; background:var(--line); margin-top:22px; position:relative; overflow:hidden;
+    opacity:0; animation:textUp .5s ease forwards 1.15s;
+  }
+  .loader-bar::after{
+    content:""; position:absolute; left:-100%; top:0; height:100%; width:100%;
+    background:var(--timber);
+    animation:loadSweep 1.5s ease-in-out forwards 1.3s;
+  }
+  @keyframes loadSweep{ to{ left:0%; } }
+
+  /* ============ HEADER ============ */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:1000;
+    background:transparent;
+    transition:background .4s ease, box-shadow .4s ease, padding .4s ease;
+    padding:22px 0;
+  }
+  header.solid{
+    background:rgba(20,29,22,0.96);
+    backdrop-filter:blur(10px);
+    box-shadow:0 10px 30px -15px rgba(0,0,0,.4);
+    padding:12px 0;
+  }
+  .nav-row{ display:flex; align-items:center; justify-content:space-between; gap:24px; }
+  .brand{ display:flex; align-items:center; gap:13px; }
+  .brand img{ width:52px; height:52px; object-fit:contain; flex-shrink:0; transition:width .3s ease, height .3s ease; }
+  header.solid .brand img{ width:44px; height:44px; }
+  .brand .btext{ display:flex; flex-direction:column; line-height:1.15; }
+  .brand .btext .b1{ font-family:'Fraunces',serif; font-size:1.18rem; color:var(--cream); font-weight:600; white-space:nowrap; }
+  .brand .btext .b2{ font-family:'Sora',sans-serif; font-size:.62rem; letter-spacing:.24em; text-transform:uppercase; color:var(--timber-light); }
+
+  nav.mainnav{ display:flex; align-items:center; gap:38px; }
+  nav.mainnav a{
+    font-family:'Sora',sans-serif; font-size:.8rem; letter-spacing:.04em;
+    color:var(--cream-dim); font-weight:500;
+    position:relative; padding:6px 0;
+  }
+  nav.mainnav a::after{
+    content:""; position:absolute; left:0; bottom:0; height:1px; width:0%;
+    background:var(--timber); transition:width .3s ease;
+  }
+  nav.mainnav a:hover::after, nav.mainnav a.active::after{ width:100%; }
+  nav.mainnav a:hover, nav.mainnav a.active{ color:var(--cream); }
+
+  .has-drop{ position:relative; }
+  .drop{
+    position:absolute; top:130%; left:50%; transform:translateX(-50%) translateY(6px);
+    background:var(--forest); border:1px solid var(--line);
+    min-width:200px; padding:10px; border-radius:3px;
+    opacity:0; visibility:hidden; transition:all .25s ease;
+    box-shadow:var(--shadow);
+  }
+  .has-drop:hover .drop{ opacity:1; visibility:visible; transform:translateX(-50%) translateY(0); }
+  .drop a{ display:block; padding:9px 12px; font-size:.76rem; border-radius:2px; }
+  .drop a::after{ display:none; }
+  .drop a:hover{ background:rgba(246,241,230,0.06); color:var(--timber-light); }
+
+  .header-cta{ display:flex; align-items:center; gap:18px; }
+  .header-phone{ display:flex; flex-direction:column; text-align:right; }
+  .header-phone .lbl{ font-family:'Sora',sans-serif; font-size:.6rem; letter-spacing:.18em; text-transform:uppercase; color:var(--moss-light); }
+  .header-phone .num{ font-family:'Fraunces',serif; font-size:1rem; color:var(--cream); }
+
+  .burger{ display:none; flex-direction:column; gap:5px; background:none; border:none; padding:6px; }
+  .burger span{ width:24px; height:2px; background:var(--cream); display:block; }
+
+  /* mobile nav */
+  .mobile-nav{
+    position:fixed; inset:0 0 0 auto; width:min(340px,86%); background:var(--forest);
+    z-index:1200; transform:translateX(100%); transition:transform .45s cubic-bezier(.65,0,.35,1);
+    padding:90px 30px 30px; display:flex; flex-direction:column; gap:6px;
+    box-shadow:-20px 0 50px rgba(0,0,0,.4);
+  }
+  .mobile-nav.open{ transform:translateX(0); }
+  .mobile-nav a{ font-family:'Fraunces',serif; font-size:1.1rem; color:var(--cream); padding:14px 0; border-bottom:1px solid var(--line); }
+  .mobile-nav .sub a{ font-family:'Sora',sans-serif; font-size:.85rem; color:var(--cream-dim); padding:10px 0 10px 14px; border-bottom:none; }
+  .overlay{ position:fixed; inset:0; background:rgba(0,0,0,.5); z-index:1100; opacity:0; visibility:hidden; transition:all .4s ease; }
+  .overlay.open{ opacity:1; visibility:visible; }
+
+  /* ============ HERO ============ */
+  .hero{
+    position:relative; min-height:100vh; display:flex; align-items:center;
+    background:
+      linear-gradient(105deg, rgba(15,22,16,0.92) 0%, rgba(20,29,22,0.72) 45%, rgba(20,29,22,0.35) 100%),
+      url('https://lirp.cdn-website.com/436a5504/dms3rep/multi/opt/IMG_1669-1920w.jpeg') center/cover no-repeat;
+  }
+  .hero-inner{ max-width:640px; padding-top:110px; }
+  .hero h1{ color:var(--cream); font-size:clamp(2.4rem, 5vw, 3.6rem); margin:20px 0 22px; }
+  .hero h1 em{ color:var(--timber-light); font-style:normal; }
+  .hero p.lead{ color:var(--cream-dim); font-size:1.06rem; max-width:520px; margin-bottom:34px; font-weight:300; }
+  .hero-ctas{ display:flex; gap:16px; flex-wrap:wrap; margin-bottom:56px;}
+  .hero-badges{ display:flex; gap:34px; flex-wrap:wrap; }
+  .hero-badges .hb{ display:flex; flex-direction:column; gap:2px; }
+  .hero-badges .hb strong{ font-family:'Fraunces',serif; color:var(--timber-light); font-size:1.5rem; }
+  .hero-badges .hb span{ font-family:'Sora',sans-serif; font-size:.66rem; letter-spacing:.1em; text-transform:uppercase; color:var(--moss-light); }
+  .scroll-cue{
+    position:absolute; bottom:34px; left:50%; transform:translateX(-50%);
+    display:flex; flex-direction:column; align-items:center; gap:8px; color:var(--cream-dim);
+    font-family:'Sora',sans-serif; font-size:.62rem; letter-spacing:.2em; text-transform:uppercase;
+  }
+  .scroll-cue .line{ width:1px; height:34px; background:linear-gradient(var(--timber), transparent); animation:cueMove 1.8s ease-in-out infinite; }
+  @keyframes cueMove{ 0%,100%{opacity:.3;} 50%{opacity:1;} }
+
+  /* ============ SECTIONS GENERIC ============ */
+  section{ padding:110px 0; }
+  .section-alt{ background:var(--forest); color:var(--cream); }
+  .section-alt h2, .section-alt h3{ color:var(--cream); }
+  .sec-head{ max-width:640px; margin-bottom:56px; }
+  .sec-head h2{ font-size:clamp(1.8rem,3.4vw,2.6rem); margin-top:14px; }
+  .sec-head p{ margin-top:16px; color:#5a6357; font-weight:300; font-size:1.02rem; }
+  .section-alt .sec-head p{ color:var(--moss-light); }
+
+  /* about teaser (home) */
+  .about-teaser{ display:grid; grid-template-columns:1fr 1fr; gap:70px; align-items:center; }
+  .about-teaser .imgwrap{ position:relative; }
+  .about-teaser .imgwrap img{ width:100%; height:480px; object-fit:cover; border-radius:2px; }
+  .about-teaser .imgwrap .frame{
+    position:absolute; top:-22px; left:-22px; right:22px; bottom:22px;
+    border:1px solid var(--timber); z-index:-1;
+  }
+  .about-teaser .stat-chip{
+    position:absolute; bottom:-30px; right:-30px; background:var(--forest); color:var(--cream);
+    padding:26px 30px; text-align:center; box-shadow:var(--shadow);
+  }
+  .about-teaser .stat-chip strong{ font-family:'Fraunces',serif; font-size:2.1rem; color:var(--timber-light); display:block; }
+  .about-teaser .stat-chip span{ font-family:'Sora',sans-serif; font-size:.62rem; letter-spacing:.15em; text-transform:uppercase; color:var(--moss-light); }
+  .about-teaser ul{ list-style:none; margin-top:26px; display:flex; flex-direction:column; gap:14px; }
+  .about-teaser ul li{ display:flex; gap:12px; align-items:flex-start; font-size:.96rem; color:#3d453a; }
+  .about-teaser ul li .dot{ width:7px;height:7px; border-radius:50%; background:var(--timber); margin-top:8px; flex-shrink:0; }
+
+  /* services grid */
+  .services-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:26px; }
+  .svc-card{
+    position:relative; height:420px; overflow:hidden; border-radius:2px;
+    display:flex; align-items:flex-end; cursor:pointer;
+  }
+  .svc-card img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .7s ease; }
+  .svc-card::before{
+    content:""; position:absolute; inset:0;
+    background:linear-gradient(0deg, rgba(15,22,16,0.92) 0%, rgba(15,22,16,0.25) 55%, rgba(15,22,16,0.05) 100%);
+    z-index:1;
+  }
+  .svc-card:hover img{ transform:scale(1.08); }
+  .svc-card .content{ position:relative; z-index:2; padding:30px; width:100%; }
+  .svc-card .num{ font-family:'Sora',sans-serif; font-size:.66rem; letter-spacing:.2em; color:var(--timber-light); text-transform:uppercase; }
+  .svc-card h3{ color:var(--cream); font-size:1.35rem; margin:10px 0 12px; }
+  .svc-card .arrow{
+    width:38px; height:38px; border:1px solid rgba(246,241,230,.4); border-radius:50%;
+    display:flex; align-items:center; justify-content:center; color:var(--cream);
+    transition:all .3s ease;
+  }
+  .svc-card:hover .arrow{ background:var(--timber); border-color:var(--timber); color:var(--bark); transform:rotate(45deg); }
+
+  /* why choose us */
+  .why-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:20px; }
+  .why-item{
+    display:flex; gap:18px; padding:26px; border:1px solid var(--line); border-radius:2px;
+    transition:border-color .3s ease, background .3s ease;
+  }
+  .why-item:hover{ border-color:var(--timber); background:rgba(200,138,74,0.06); }
+  .why-item .ico{
+    width:46px; height:46px; border-radius:50%; background:rgba(200,138,74,0.14);
+    display:flex; align-items:center; justify-content:center; flex-shrink:0; color:var(--timber-light);
+  }
+  .why-item h4{ color:var(--cream); font-size:1.02rem; margin-bottom:6px; }
+  .why-item p{ color:var(--moss-light); font-size:.88rem; font-weight:300; }
+
+  /* offerings row (icons) */
+  .offer-row{ display:grid; grid-template-columns:repeat(4,1fr); gap:20px; margin-top:10px; }
+  .offer-card{
+    text-align:center; padding:38px 20px; background:#fff; border:1px solid #e9e3d3;
+    border-radius:2px; transition:transform .3s ease, box-shadow .3s ease;
+  }
+  .offer-card:hover{ transform:translateY(-6px); box-shadow:var(--shadow); }
+  .offer-card .ico{
+    width:58px; height:58px; border-radius:50%; background:var(--forest); color:var(--timber-light);
+    display:flex; align-items:center; justify-content:center; margin:0 auto 18px;
+  }
+  .offer-card h4{ font-size:1rem; margin-bottom:8px; }
+  .offer-card p{ font-size:.84rem; color:#6a7364; font-weight:300; }
+
+  /* gallery */
+  .gallery-grid{ display:grid; grid-template-columns:repeat(4,1fr); grid-auto-rows:200px; gap:14px; }
+  .gallery-grid img{ width:100%; height:100%; object-fit:cover; border-radius:2px; transition:transform .5s ease, filter .5s ease; }
+  .g-item{ overflow:hidden; border-radius:2px; position:relative; }
+  .g-item:nth-child(1){ grid-column:span 2; grid-row:span 2; }
+  .g-item:nth-child(4){ grid-column:span 2; }
+  .g-item:hover img{ transform:scale(1.1); }
+  .g-item .tag{
+    position:absolute; bottom:14px; left:14px; background:rgba(20,29,22,0.85); color:var(--cream);
+    font-family:'Sora',sans-serif; font-size:.62rem; letter-spacing:.15em; text-transform:uppercase;
+    padding:6px 12px; z-index:2;
+  }
+
+  /* testimonials */
+  .testi-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+  .testi-card{
+    background:rgba(246,241,230,0.04); border:1px solid var(--line); border-radius:2px;
+    padding:32px; display:flex; flex-direction:column; gap:16px;
+  }
+  .stars{ color:var(--timber-light); letter-spacing:3px; font-size:.9rem; }
+  .testi-card p.quote{ color:var(--cream-dim); font-weight:300; font-size:.92rem; font-style:italic; }
+  .testi-who{ display:flex; align-items:center; gap:12px; margin-top:auto; }
+  .testi-avatar{
+    width:42px; height:42px; border-radius:50%; background:var(--timber); color:var(--bark);
+    display:flex; align-items:center; justify-content:center; font-family:'Fraunces',serif; font-weight:700;
+  }
+  .testi-who strong{ color:var(--cream); font-size:.88rem; display:block; }
+  .testi-who span{ color:var(--moss-light); font-size:.72rem; }
+
+  /* faq */
+  .faq-item{ border-bottom:1px solid #e0d8c3; }
+  .faq-q{
+    display:flex; justify-content:space-between; align-items:center; gap:20px;
+    padding:24px 0; cursor:pointer;
+  }
+  .faq-q h4{ font-size:1.02rem; color:var(--forest); font-weight:500; font-family:'Sora',sans-serif; }
+  .faq-q .plus{ width:26px; height:26px; flex-shrink:0; position:relative; }
+  .faq-q .plus::before, .faq-q .plus::after{ content:""; position:absolute; background:var(--timber); transition:transform .3s ease; }
+  .faq-q .plus::before{ width:100%; height:1px; top:50%; left:0; }
+  .faq-q .plus::after{ width:1px; height:100%; left:50%; top:0; }
+  .faq-item.open .plus::after{ transform:scaleY(0); }
+  .faq-a{ max-height:0; overflow:hidden; transition:max-height .4s ease; }
+  .faq-item.open .faq-a{ max-height:240px; }
+  .faq-a p{ padding-bottom:26px; color:#5a6357; font-weight:300; font-size:.92rem; max-width:680px; }
+
+  /* CTA banner */
+  .cta-banner{
+    background:linear-gradient(120deg, var(--bark), var(--forest));
+    color:var(--cream); text-align:center; padding:90px 0;
+  }
+  .cta-banner .eyebrow{ justify-content:center; }
+  .cta-banner h2{ color:var(--cream); font-size:clamp(1.8rem,3.6vw,2.6rem); margin:16px 0 30px; }
+  .cta-banner .btnrow{ display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+
+  /* contact page */
+  .contact-grid{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:60px; }
+  .contact-card{ display:flex; gap:16px; padding:20px 0; border-bottom:1px solid var(--line); }
+  .contact-card .ico{ width:40px; height:40px; border-radius:50%; background:rgba(200,138,74,0.14); color:var(--timber-light); display:flex; align-items:center; justify-content:center; flex-shrink:0;}
+  .contact-card strong{ color:var(--cream); display:block; font-size:.92rem; margin-bottom:4px; }
+  .contact-card span, .contact-card a{ color:var(--moss-light); font-size:.88rem; }
+  .form-box{ background:var(--cream); border-radius:2px; padding:40px; }
+  .form-box h3{ margin-bottom:22px; }
+  .form-row{ display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px; }
+  .form-box input, .form-box select, .form-box textarea{
+    width:100%; padding:14px 16px; border:1px solid #ddd4bd; background:#fff;
+    font-family:'Inter',sans-serif; font-size:.9rem; border-radius:2px; outline:none;
+    transition:border-color .3s ease;
+  }
+  .form-box input:focus, .form-box select:focus, .form-box textarea:focus{ border-color:var(--timber); }
+  .form-box textarea{ min-height:120px; resize:vertical; margin-bottom:20px; }
+  .map-box{ margin-top:20px; border-radius:2px; overflow:hidden; border:1px solid var(--line); }
+  .map-box iframe{ width:100%; height:340px; border:0; display:block; filter:grayscale(0.25) contrast(1.05); }
+
+  /* service detail page */
+  .svc-hero{
+    position:relative; min-height:56vh; display:flex; align-items:flex-end;
+    background-size:cover; background-position:center;
+  }
+  .svc-hero::before{ content:""; position:absolute; inset:0; background:linear-gradient(0deg, rgba(15,22,16,0.94), rgba(15,22,16,0.4)); }
+  .svc-hero .wrap{ position:relative; z-index:2; padding-bottom:70px; }
+  .svc-hero h1{ color:var(--cream); font-size:clamp(2rem,4vw,3rem); margin-top:14px; }
+  .breadcrumb{ font-family:'Sora',sans-serif; font-size:.74rem; color:var(--moss-light); margin-top:16px; }
+  .breadcrumb a{ color:var(--cream-dim); }
+  .breadcrumb a:hover{ color:var(--timber-light); }
+
+  .svc-body{ display:grid; grid-template-columns:1.3fr 0.9fr; gap:70px; }
+  .svc-body p{ color:#4a5245; font-weight:300; margin-bottom:18px; }
+  .svc-feature-list{ list-style:none; margin:26px 0; display:flex; flex-direction:column; gap:14px; }
+  .svc-feature-list li{ display:flex; gap:12px; align-items:flex-start; font-size:.94rem; color:#3d453a; }
+  .svc-feature-list li .chk{
+    width:20px; height:20px; border-radius:50%; background:var(--forest); color:var(--timber-light);
+    display:flex; align-items:center; justify-content:center; font-size:.65rem; flex-shrink:0; margin-top:2px;
+  }
+  .svc-side{
+    background:var(--forest); color:var(--cream); padding:36px; border-radius:2px; align-self:start; position:sticky; top:110px;
+  }
+  .svc-side h4{ color:var(--cream); margin-bottom:18px; }
+  .svc-side ul{ list-style:none; display:flex; flex-direction:column; gap:2px; margin-bottom:24px; }
+  .svc-side ul a{
+    display:flex; justify-content:space-between; padding:13px 0; border-bottom:1px solid var(--line);
+    font-family:'Sora',sans-serif; font-size:.84rem; color:var(--cream-dim);
+  }
+  .svc-side ul a.active, .svc-side ul a:hover{ color:var(--timber-light); }
+  .svc-process{ display:grid; grid-template-columns:repeat(4,1fr); gap:20px; margin-top:20px; }
+  .proc-step{ padding:26px 22px; border:1px solid #e0d8c3; border-radius:2px; }
+  .proc-step .ring{ font-family:'Fraunces',serif; font-size:1.6rem; color:var(--timber); margin-bottom:12px; }
+  .proc-step h4{ font-size:.94rem; margin-bottom:8px; }
+  .proc-step p{ font-size:.82rem; color:#6a7364; font-weight:300; }
+
+  /* about page extras */
+  .stat-strip{ display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+  .stat-strip .st{ text-align:center; padding:30px 10px; border-right:1px solid var(--line); }
+  .stat-strip .st:last-child{ border-right:none; }
+  .stat-strip strong{ font-family:'Fraunces',serif; font-size:2.3rem; color:var(--timber-light); display:block; }
+  .stat-strip span{ font-family:'Sora',sans-serif; font-size:.66rem; letter-spacing:.15em; text-transform:uppercase; color:var(--moss-light); }
+
+  .value-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:26px; }
+  .value-card{ padding:34px 28px; background:#fff; border:1px solid #e9e3d3; }
+  .value-card .ring-num{ font-family:'Fraunces',serif; font-size:1.1rem; color:var(--timber); border:1px solid var(--timber); width:44px; height:44px; border-radius:50%; display:flex; align-items:center; justify-content:center; margin-bottom:18px; }
+
+  /* footer */
+  footer{ background:var(--bark); color:var(--cream-dim); padding-top:90px; }
+  .footer-grid{ display:grid; grid-template-columns:1.4fr 0.8fr 1fr 1fr; gap:50px; padding-bottom:60px; border-bottom:1px solid var(--line); }
+  .footer-brand .brand{ margin-bottom:18px; }
+  .footer-brand p{ font-size:.88rem; font-weight:300; color:#9aa392; max-width:300px; }
+  .footer-social{ display:flex; gap:12px; margin-top:22px; }
+  .footer-social a{ width:38px; height:38px; border:1px solid var(--line); border-radius:50%; display:flex; align-items:center; justify-content:center; transition:all .3s ease; }
+  .footer-social a:hover{ background:var(--timber); border-color:var(--timber); color:var(--bark); }
+  footer h5{ font-family:'Sora',sans-serif; font-size:.72rem; letter-spacing:.18em; text-transform:uppercase; color:var(--cream); margin-bottom:22px; }
+  footer ul{ list-style:none; display:flex; flex-direction:column; gap:13px; }
+  footer ul a{ font-size:.88rem; color:#9aa392; transition:color .3s ease; }
+  footer ul a:hover{ color:var(--timber-light); }
+  .footer-hours-row{ display:flex; justify-content:space-between; font-size:.85rem; padding:6px 0; }
+  .footer-bottom{ display:flex; justify-content:space-between; align-items:center; padding:26px 0; font-size:.78rem; color:#77806e; flex-wrap:wrap; gap:10px; }
+  .footer-map{ margin-top:16px; border-radius:2px; overflow:hidden; opacity:.9; }
+  .footer-map iframe{ width:100%; height:150px; border:0; filter:grayscale(0.4); }
+
+  .call-fab{
+    position:fixed; bottom:26px; right:26px; z-index:900;
+    width:60px; height:60px; border-radius:50%; background:var(--timber); color:var(--bark);
+    display:flex; align-items:center; justify-content:center; box-shadow:0 12px 30px -8px rgba(200,138,74,0.6);
+    animation:pulse 2.4s ease-in-out infinite;
+  }
+  @keyframes pulse{ 0%,100%{ box-shadow:0 12px 30px -8px rgba(200,138,74,0.6);} 50%{ box-shadow:0 12px 34px -4px rgba(200,138,74,0.9);} }
+
+  .page{ display:none; }
+  .page.active{ display:block; animation:fadeInPage .6s ease; }
+  @keyframes fadeInPage{ from{opacity:0; transform:translateY(10px);} to{opacity:1; transform:translateY(0);} }
+
+  [data-reveal]{ opacity:0; transform:translateY(28px); transition:opacity .8s ease, transform .8s ease; }
+  [data-reveal].in{ opacity:1; transform:translateY(0); }
+
+  @media(max-width:1000px){
+    nav.mainnav, .header-cta .header-phone{ display:none; }
+    .burger{ display:flex; }
+    .services-grid{ grid-template-columns:repeat(2,1fr); }
+    .about-teaser, .contact-grid, .svc-body{ grid-template-columns:1fr; }
+    .why-grid, .offer-row, .testi-grid, .value-grid, .svc-process, .stat-strip{ grid-template-columns:repeat(2,1fr); }
+    .footer-grid{ grid-template-columns:1fr 1fr; }
+    .gallery-grid{ grid-template-columns:repeat(2,1fr); }
+    .g-item:nth-child(1){ grid-column:span 2; }
+  }
+  @media(max-width:600px){
+    section{ padding:76px 0; }
+    .services-grid, .why-grid, .offer-row, .testi-grid, .value-grid, .svc-process, .stat-strip, .footer-grid{ grid-template-columns:1fr; }
+    .stat-strip .st{ border-right:none; border-bottom:1px solid var(--line); }
+    .form-row{ grid-template-columns:1fr; }
+    .about-teaser .stat-chip{ position:static; margin-top:20px; display:inline-block; }
+    .gallery-grid{ grid-template-columns:1fr 1fr; }
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{ animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; scroll-behavior:auto !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ PRELOADER ============ -->
+<div id="preloader">
+  <div class="ring-loader">
+    <svg viewBox="0 0 150 150">
+      <circle cx="75" cy="75" r="70"></circle>
+      <circle cx="75" cy="75" r="55"></circle>
+      <circle cx="75" cy="75" r="40"></circle>
+    </svg>
+    <img class="loader-logo" src="https://irp.cdn-website.com/436a5504/dms3rep/multi/opt/bigbranchtreecompany_logo-1920w.png" alt="Big Branch Tree Company logo" />
+  </div>
+  <div class="loader-text">
+    <div class="name">Big Branch Tree Company</div>
+    <div class="tag">Green Ridge · Sedalia, MO</div>
+  </div>
+  <div class="loader-bar"></div>
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+<!-- ============ HEADER ============ -->
+<header id="siteHeader">
+  <div class="wrap nav-row">
+    <a href="#home" class="brand">
+      <img src="https://irp.cdn-website.com/436a5504/dms3rep/multi/opt/bigbranchtreecompany_logo-1920w.png" alt="Big Branch Tree Company LLC logo" />
+      <span class="btext">
+        <span class="b1">Big Branch Tree Co.</span>
+        <span class="b2">LLC · Green Ridge, MO</span>
+      </span>
+    </a>
+
+    <nav class="mainnav">
+      <a href="#home" class="nav-link" data-route="home">Home</a>
+      <a href="#about" class="nav-link" data-route="about">About Us</a>
+      <div class="has-drop">
+        <a href="#services" class="nav-link" data-route="services">Services</a>
+        <div class="drop">
+          <a href="#service-tree-removal">Tree Removal</a>
+          <a href="#service-tree-trimming">Tree Trimming</a>
+          <a href="#service-storm-damage">Storm Damage</a>
+          <a href="#service-tree-care">Tree Care</a>
+        </div>
+      </div>
+      <a href="#gallery" class="nav-link" data-route="gallery">Gallery</a>
+      <a href="#testimonials" class="nav-link" data-route="testimonials">Reviews</a>
+      <a href="#faq" class="nav-link" data-route="faq">FAQs</a>
+      <a href="#contact" class="nav-link" data-route="contact">Contact Us</a>
+    </nav>
+
+    <div class="header-cta">
+      <div class="header-phone">
+        <span class="lbl">Call for a free estimate</span>
+        <a class="num" href="tel:16602213361">(660) 221-3361</a>
+      </div>
+      <a href="#contact" class="btn btn-primary">Get Estimate</a>
+      <button class="burger" id="burgerBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ MOBILE NAV ============ -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#home">Home</a>
+  <a href="#about">About Us</a>
+  <a href="#services">Services</a>
+  <div class="sub">
+    <a href="#service-tree-removal">— Tree Removal</a>
+    <a href="#service-tree-trimming">— Tree Trimming</a>
+    <a href="#service-storm-damage">— Storm Damage</a>
+    <a href="#service-tree-care">— Tree Care</a>
+  </div>
+  <a href="#gallery">Gallery</a>
+  <a href="#testimonials">Reviews</a>
+  <a href="#faq">FAQs</a>
+  <a href="#contact">Contact Us</a>
+  <a href="tel:16602213361" style="color:var(--timber-light); margin-top:10px;">(660) 221-3361</a>
+</div>
+
+<main id="app">
+
+<!-- ============================================================ -->
+<!-- HOME PAGE -->
+<!-- ============================================================ -->
+<section class="page" id="page-home">
+
+  <div class="hero">
+    <div class="wrap hero-inner">
+      <span class="eyebrow">A Family-Owned &amp; Operated Business You Can Trust</span>
+      <h1>Professional tree services for the <em>Green Ridge &amp; Sedalia, MO</em> area</h1>
+      <p class="lead">From careful removals to storm-damage cleanup, our crew treats every property like our own — with more than ten years of hands-on experience behind each cut.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-primary">Contact Us</a>
+        <a href="#services" class="btn btn-outline">Explore Services</a>
+      </div>
+      <div class="hero-badges">
+        <div class="hb"><strong>10+</strong><span>Years Experience</span></div>
+        <div class="hb"><strong>25 mi</strong><span>Free Estimate Radius</span></div>
+        <div class="hb"><strong>24/7</strong><span>Emergency Storm Calls</span></div>
+      </div>
+    </div>
+    <div class="scroll-cue"><span>Scroll</span><span class="line"></span></div>
+  </div>
+
+  <!-- about teaser -->
+  <section>
+    <div class="wrap about-teaser">
+      <div data-reveal>
+        <div class="imgwrap">
+          <div class="frame"></div>
+          <img src="https://irp.cdn-website.com/436a5504/dms3rep/multi/opt/IMG_1640-1920w.jpeg" alt="Big Branch Tree Company crew trimming a tree from a bucket truck" />
+          <div class="stat-chip"><strong>500+</strong><span>Trees Cared For</span></div>
+        </div>
+      </div>
+      <div data-reveal>
+        <span class="eyebrow">Committed to Excellence, One Cut at a Time</span>
+        <h2>Trust our tree company in Green Ridge, Sedalia, MO</h2>
+        <p style="color:#4a5245; font-weight:300; margin-top:18px;">As a homeowner, taking care of your trees is one of your biggest tasks. But if you need a helping hand, Big Branch Tree Company LLC can easily take some of the weight off your shoulders. We offer an array of professional tree services in the Green Ridge, Sedalia, MO area. Whether you want to remove or trim your trees, we've got you covered.</p>
+        <ul>
+          <li><span class="dot"></span> Family-owned, safety-first crew with 10+ years of experience</li>
+          <li><span class="dot"></span> Residential and commercial tree service</li>
+          <li><span class="dot"></span> Free estimates within 25 miles of Green Ridge, MO</li>
+          <li><span class="dot"></span> Seasonal mulch and firewood available</li>
+        </ul>
+        <a href="#about" class="btn btn-dark" style="margin-top:30px;">More About Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- services -->
+  <section class="section-alt" id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">What We Do</span>
+        <h2>Our Services</h2>
+        <p>Four core services, one standard of care — every job handled by an experienced, insured crew.</p>
+      </div>
+      <div class="services-grid" data-reveal>
+        <a class="svc-card" href="#service-tree-removal">
+          <img src="https://irp.cdn-website.com/436a5504/dms3rep/multi/opt/chainsaw-v2-1920w.png" style="object-fit:contain; background:#0c1310; padding:30px;" alt="Tree removal service" />
+          <div class="content">
+            <span class="num">01 — Removal</span>
+            <h3>Tree Removal</h3>
+            <div class="arrow">→</div>
+          </div>
+        </a>
+        <a class="svc-card" href="#service-tree-trimming">
+          <img src="https://irp.cdn-website.com/436a5504/dms3rep/multi/opt/IMG_1669-e454f43b-1920w.jpeg" alt="Tree trimming service" />
+          <div class="content">
+            <span class="num">02 — Trimming</span>
+            <h3>Tree Trimming</h3>
+            <div class="arrow">→</div>
+          </div>
+        </a>
+        <a class="svc-card" href="#service-storm-damage">
+          <img src="https://irp.cdn-website.com/436a5504/dms3rep/multi/opt/IMG_1643-1920w.jpg" alt="Storm damage tree cleanup" />
+          <div class="content">
+            <span class="num">03 — Storm Damage</span>
+            <h3>Storm Damage</h3>
+            <div class="arrow">→</div>
+          </div>
+        </a>
+        <a class="svc-card" href="#service-tree-care">
+          <img src="https://irp.cdn-website.com/436a5504/dms3rep/multi/opt/IMG_1667-1920w.jpg" alt="Ongoing tree care" />
+          <div class="content">
+            <span class="num">04 — Tree Care</span>
+            <h3>Tree Care</h3>
+            <div class="arrow">→</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- offerings -->
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Why Homeowners Call Us</span>
+        <h2>What do we have to offer you?</h2>
+        <p>With years of experience, we have the skills needed to treat your trees with care and help them grow tall and strong.</p>
+      </div>
+      <div class="offer-row" data-reveal>
+        <div class="offer-card">
+          <div class="ico">🌳</div>
+          <h4>Tree Care</h4>
+          <p>Ongoing health checks, feeding &amp; disease prevention for every tree on your property.</p>
+        </div>
+        <div class="offer-card">
+          <div class="ico">🪓</div>
+          <h4>Tree Removal</h4>
+          <p>Safe, complete removal of dead, dying or unwanted trees — stump included.</p>
+        </div>
+        <div class="offer-card">
+          <div class="ico">⛓️</div>
+          <h4>Tree Trimming</h4>
+          <p>Precision pruning that keeps trees healthy, shapely and safely clear of structures.</p>
+        </div>
+        <div class="offer-card">
+          <div class="ico">⛈️</div>
+          <h4>Storm Damage</h4>
+          <p>Rapid response cleanup and hazard removal after high winds or severe storms.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- why choose us -->
+  <section class="section-alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">See What Sets Us Apart From The Rest</span>
+        <h2>Our tree company sets customer satisfaction as a top priority</h2>
+        <p>We go above and beyond on every single job we take on.</p>
+      </div>
+      <div class="why-grid" data-reveal>
+        <div class="why-item"><div class="ico">✓</div><div><h4>Safety First</h4><p>Every job is planned and executed with strict safety protocols for our crew and your property.</p></div></div>
+        <div class="why-item"><div class="ico">✓</div><div><h4>Strong Work Ethic</h4><p>We pride ourselves on showing up, doing the job right, and cleaning up when we're done.</p></div></div>
+        <div class="why-item"><div class="ico">✓</div><div><h4>Emergency Availability</h4><p>Storm damage doesn't wait for business hours — neither do we, when it matters most.</p></div></div>
+        <div class="why-item"><div class="ico">✓</div><div><h4>Residential &amp; Commercial</h4><p>From backyard oaks to commercial lots, we scale our crew to fit the job.</p></div></div>
+        <div class="why-item"><div class="ico">✓</div><div><h4>10+ Years of Knowledge</h4><p>Over a decade of applied, hands-on tree care experience across mid-Missouri.</p></div></div>
+        <div class="why-item"><div class="ico">✓</div><div><h4>Mulch &amp; Firewood</h4><p>We provide seasonal mulch and firewood as part of our full-service approach.</p></div></div>
+      </div>
+      <div style="text-align:center; margin-top:50px;">
+        <a href="#contact" class="btn btn-primary">Ask For A Free Estimate</a>
+        <p style="margin-top:14px; color:var(--moss-light); font-size:.82rem;">Free estimates for properties within 25 miles of Green Ridge, Sedalia, MO</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- reviews teaser -->
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Customer Reviews</span>
+        <h2>What our neighbors are saying</h2>
+        <p>A few words from homeowners across Green Ridge and Sedalia.</p>
+      </div>
+      <div class="testi-grid" data-reveal style="color:var(--bark);">
+        <div class="testi-card" style="background:#fff; border-color:#e9e3d3;">
+          <div class="stars">★★★★★</div>
+          <p class="quote" style="color:#4a5245;">Removed a massive dead oak just feet from our roof without a scratch on the house. Cleaned up every branch before they left.</p>
+          <div class="testi-who"><div class="testi-avatar">S</div><div><strong style="color:var(--forest);">Sarah M.</strong><span style="color:#8a9080;">Sedalia, MO</span></div></div>
+        </div>
+        <div class="testi-card" style="background:#fff; border-color:#e9e3d3;">
+          <div class="stars">★★★★★</div>
+          <p class="quote" style="color:#4a5245;">Called after a storm knocked a limb onto our fence and they were out the next morning. Fast, fair, and friendly.</p>
+          <div class="testi-who"><div class="testi-avatar">M</div><div><strong style="color:var(--forest);">Mike T.</strong><span style="color:#8a9080;">Green Ridge, MO</span></div></div>
+        </div>
+        <div class="testi-card" style="background:#fff; border-color:#e9e3d3;">
+          <div class="stars">★★★★★</div>
+          <p class="quote" style="color:#4a5245;">Great trimming job on our maples — they explained exactly what they'd cut and why before starting. Very professional.</p>
+          <div class="testi-who"><div class="testi-avatar">D</div><div><strong style="color:var(--forest);">Diane R.</strong><span style="color:#8a9080;">Sedalia, MO</span></div></div>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:40px;">
+        <a href="#testimonials" class="btn btn-dark">Read More Reviews</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- cta banner -->
+  <section class="cta-banner">
+    <div class="wrap">
+      <span class="eyebrow">Curious About Removing Your Trees?</span>
+      <h2>Ask for a free estimate if you're within 25 miles of Green Ridge, Sedalia, MO</h2>
+      <div class="btnrow">
+        <a href="tel:16602213361" class="btn btn-primary">Call (660) 221-3361</a>
+        <a href="#contact" class="btn btn-outline">Request Online</a>
+      </div>
+    </div>
+  </section>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- ABOUT US PAGE (distinct from home teaser) -->
+<!-- ============================================================ -->
+<section class="page" id="page-about">
+  <div class="svc-hero" style="background-image:url('https://irp.cdn-website.com/436a5504/dms3rep/multi/opt/IMG_1667-1920w.jpg');">
+    <div class="wrap">
+      <div class="breadcrumb"><a href="#home">Home</a> &nbsp;/&nbsp; About Us</div>
+      <span class="eyebrow" style="color:var(--timber-light);">Our Story</span>
+      <h1>Rooted in Green Ridge, built on trust</h1>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="about-teaser" style="align-items:start;">
+        <div data-reveal>
+          <span class="eyebrow">Who We Are</span>
+          <h2>A family name behind every job we take on</h2>
+          <p style="color:#4a5245; font-weight:300; margin-top:18px;">Big Branch Tree Company LLC is a family-owned and operated tree service based in Green Ridge, Missouri, proudly serving homeowners and businesses throughout the Sedalia area. What started as one crew with a truck and a chainsaw has grown into a trusted local name — built job by job, referral by referral.</p>
+          <p style="color:#4a5245; font-weight:300;">We believe tree care is personal. It's the oak that's been in your yard for fifty years, the branch hanging over your kids' swing set, the storm-snapped limb blocking your driveway at 6am. We treat every property the way we'd want our own treated: carefully, honestly, and completely cleaned up before we leave.</p>
+          <p style="color:#4a5245; font-weight:300;">Today, our crew brings more than ten years of combined hands-on experience to every removal, trim, and storm cleanup — backed by a genuine commitment to safety and customer satisfaction.</p>
+          <a href="#contact" class="btn btn-dark" style="margin-top:20px;">Get In Touch</a>
+        </div>
+        <div data-reveal>
+          <div class="imgwrap">
+            <div class="frame"></div>
+            <img src="https://irp.cdn-website.com/436a5504/dms3rep/multi/opt/IMG_1643-1920w.jpg" alt="Big Branch Tree Company work truck on a residential job" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="wrap">
+      <div class="stat-strip" data-reveal>
+        <div class="st"><strong>10+</strong><span>Years Experience</span></div>
+        <div class="st"><strong>500+</strong><span>Trees Serviced</span></div>
+        <div class="st"><strong>25 mi</strong><span>Free Estimate Radius</span></div>
+        <div class="st"><strong>24/7</strong><span>Storm Response</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Our Values</span>
+        <h2>What guides every job we do</h2>
+      </div>
+      <div class="value-grid" data-reveal>
+        <div class="value-card"><div class="ring-num">01</div><h4>Safety First</h4><p style="color:#6a7364; font-size:.9rem; font-weight:300; margin-top:8px;">Every crew member follows strict safety protocols on every job, no exceptions.</p></div>
+        <div class="value-card"><div class="ring-num">02</div><h4>Honest Work</h4><p style="color:#6a7364; font-size:.9rem; font-weight:300; margin-top:8px;">Clear, upfront estimates and straightforward advice — even if that means less work for us.</p></div>
+        <div class="value-card"><div class="ring-num">03</div><h4>Full Clean-Up</h4><p style="color:#6a7364; font-size:.9rem; font-weight:300; margin-top:8px;">We don't consider a job finished until your property looks better than we found it.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="wrap">
+      <span class="eyebrow">Family-Owned &amp; Operated</span>
+      <h2>Ready to work with a crew that treats your trees like their own?</h2>
+      <div class="btnrow">
+        <a href="tel:16602213361" class="btn btn-primary">Call (660) 221-3361</a>
+        <a href="#contact" class="btn btn-outline">Contact Us</a>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- ============================================================ -->
+<!-- SERVICES OVERVIEW PAGE -->
+<!-- ============================================================ -->
+<section class="page" id="page-services">
+  <div class="svc-hero" style="background-image:url('https://lirp.cdn-website.com/436a5504/dms3rep/multi/opt/IMG_1669-1920w.jpeg');">
+    <div class="wrap">
+      <div class="breadcrumb"><a href="#home">Home</a> &nbsp;/&nbsp; Services</div>
+      <span class="eyebrow" style="color:var(--timber-light);">What We Do</span>
+      <h1>Professional tree services, done right</h1>
+    </div>
+  </div>
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Our Services</span>
+        <h2>Four ways we take care of your trees</h2>
+        <p>Click into any service below for details, or call us directly for a free estimate.</p>
+      </div>
+      <div class="services-grid" data-reveal>
+        <a class="svc-card" href="#service-tree-removal">
+          <img src="https://irp.cdn-website.com/436a5504/dms3rep/multi/opt/chainsaw-v2-1920w.png" style="object-fit:contain; background:#0c1310; padding:30px;" alt="Tree removal service" />
+          <div class="content"><span class="num">01 — Removal</span><h3>Tree Removal</h3><div class="arrow">→</div></div>
+        </a>
+        <a class="svc-card" href="#service-tree-trimming">
+          <img src="https://irp.cdn-website.com/436a5504/dms3rep/multi/opt/IMG_1669-e454f43b-1920w.jpeg" alt="Tree trimming service" />
+          <div class="content"><span class="num">02 — Trimming</span><h3>Tree Trimming</h3><div class="arrow">→</div></div>
+        </a>
+        <a class="svc-card" href="#service-storm-damage">
+          <img src="https://irp.cdn-website.com/436a5504/dms3rep/multi/opt/IMG_1643-1920w.jpg" alt="Storm damage tree cleanup" />
+          <div class="content"><span class="num">03 — Storm Damage</span><h3>Storm Damage</h3><div class="arrow">→</div></div>
+        </a>
+        <a class="svc-card" href="#service-tree-care">
+          <img src="https://irp.cdn-website.com/436a5504/dms3rep/multi/opt/IMG_1667-1920w.jpg" alt="Ongoing tree care" />
+          <div class="content"><span class="num">04 — Tree Care</span><h3>Tree Care</h3><div class="arrow">→</div></div>
+        </a>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- ============================================================ -->
+<!-- SERVICE DETAIL: TREE REMOVAL -->
+<!-- ============================================================ -->
+<section class="page" id="page-service-tree-removal">
+  <div class="svc-hero" style="background-image:url('https://irp.cdn-website.com/436a5504/dms3rep/multi/opt/IMG_1667-1920w.jpg');">
+    <div class="wrap">
+      <div class="breadcrumb"><a href="#home">Home</a> / <a href="#services">Services</a> / Tree Removal</div>
+      <span class="eyebrow" style="color:var(--timber-light);">Service 01</span>
+      <h1>Tree Removal</h1>
+    </div>
+  </div>
+  <section>
+    <div class="wrap svc-body">
+      <div data-reveal>
+        <span class="eyebrow">Safe &amp; Complete</span>
+        <h2 style="margin-top:14px;">Removing dead, dying or unwanted trees — safely</h2>
+        <p style="margin-top:18px;">A dead or damaged tree can be more than an eyesore — it can be a serious risk to your home, family and property. Our crew handles tree removals of every size across Green Ridge and Sedalia, using the right equipment and technique for tight yards, tall trees and everything in between.</p>
+        <p>We assess the lean, condition and surroundings of every tree before we cut, so limbs and trunk sections come down exactly where they're supposed to. Once the tree is down, we haul away the debris and leave your property clean.</p>
+        <img src="https://irp.cdn-website.com/436a5504/dms3rep/multi/opt/chainsaw-v2-1920w.png" style="width:100%; height:300px; object-fit:contain; background:#0f1611; border-radius:2px; margin:26px 0;" alt="Chainsaw used for tree removal" />
+        <h3 style="font-size:1.2rem;">What's included</h3>
+        <ul class="svc-feature-list">
+          <li><span class="chk">✓</span> Full tree removal, trunk to canopy</li>
+          <li><span class="chk">✓</span> Stump grinding or removal available</li>
+          <li><span class="chk">✓</span> Complete debris haul-away and site clean-up</li>
+          <li><span class="chk">✓</span> Careful rigging around homes, fences &amp; power lines</li>
+          <li><span class="chk">✓</span> Free estimates within 25 miles of Green Ridge, MO</li>
+        </ul>
+        <div class="svc-process">
+          <div class="proc-step"><div class="ring">①</div><h4>Free Estimate</h4><p>We walk your property and assess the tree, then give you a clear, upfront price.</p></div>
+          <div class="proc-step"><div class="ring">②</div><h4>Safety Plan</h4><p>We map out the drop zone, rigging and equipment needed for a clean removal.</p></div>
+          <div class="proc-step"><div class="ring">③</div><h4>Removal</h4><p>Our crew carefully takes the tree down in sections where needed.</p></div>
+          <div class="proc-step"><div class="ring">④</div><h4>Clean-Up</h4><p>All branches, logs and debris are hauled away — your yard is left tidy.</p></div>
+        </div>
+      </div>
+      <aside class="svc-side" data-reveal>
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="#service-tree-removal" class="active">Tree Removal <span>→</span></a></li>
+          <li><a href="#service-tree-trimming">Tree Trimming <span>→</span></a></li>
+          <li><a href="#service-storm-damage">Storm Damage <span>→</span></a></li>
+          <li><a href="#service-tree-care">Tree Care <span>→</span></a></li>
+        </ul>
+        <h4>Need A Tree Removed?</h4>
+        <p style="color:var(--moss-light); font-size:.86rem; font-weight:300; margin-bottom:18px;">Free estimates within 25 miles of Green Ridge, Sedalia, MO.</p>
+        <a href="tel:16602213361" class="btn btn-primary" style="width:100%; justify-content:center; margin-bottom:12px;">Call (660) 221-3361</a>
+        <a href="#contact" class="btn btn-outline" style="width:100%; justify-content:center;">Request Online</a>
+      </aside>
+    </div>
+  </section>
+</section>
+
+<!-- ============================================================ -->
+<!-- SERVICE DETAIL: TREE TRIMMING -->
+<!-- ============================================================ -->
+<section class="page" id="page-service-tree-trimming">
+  <div class="svc-hero" style="background-image:url('https://irp.cdn-website.com/436a5504/dms3rep/multi/opt/IMG_1669-e454f43b-1920w.jpeg');">
+    <div class="wrap">
+      <div class="breadcrumb"><a href="#home">Home</a> / <a href="#services">Services</a> / Tree Trimming</div>
+      <span class="eyebrow" style="color:var(--timber-light);">Service 02</span>
+      <h1>Tree Trimming</h1>
+    </div>
+  </div>
+  <section>
+    <div class="wrap svc-body">
+      <div data-reveal>
+        <span class="eyebrow">Precision Pruning</span>
+        <h2 style="margin-top:14px;">Trimming that keeps trees healthy and shapely</h2>
+        <p style="margin-top:18px;">Regular trimming does more than keep your trees looking their best — it removes weak or crossing branches, improves airflow and light, and keeps limbs safely clear of your roof, power lines and walkways.</p>
+        <p>Our crew prunes with the long-term health of the tree in mind, using clean cuts placed to encourage strong future growth rather than just hacking back branches.</p>
+        <img src="https://irp.cdn-website.com/436a5504/dms3rep/multi/opt/IMG_1640-1920w.jpeg" style="width:100%; height:300px; object-fit:cover; border-radius:2px; margin:26px 0;" alt="Crew trimming tree branches from a bucket truck" />
+        <h3 style="font-size:1.2rem;">What's included</h3>
+        <ul class="svc-feature-list">
+          <li><span class="chk">✓</span> Deadwood and hazard-branch removal</li>
+          <li><span class="chk">✓</span> Canopy shaping and thinning</li>
+          <li><span class="chk">✓</span> Clearance trimming around roofs &amp; power lines</li>
+          <li><span class="chk">✓</span> Branch and clipping clean-up included</li>
+          <li><span class="chk">✓</span> Recommendations for ongoing tree health</li>
+        </ul>
+        <div class="svc-process">
+          <div class="proc-step"><div class="ring">①</div><h4>Inspection</h4><p>We evaluate each tree's structure and health before making a single cut.</p></div>
+          <div class="proc-step"><div class="ring">②</div><h4>Plan the Cuts</h4><p>We identify deadwood, crossing limbs and clearance issues to prioritize.</p></div>
+          <div class="proc-step"><div class="ring">③</div><h4>Trim &amp; Shape</h4><p>Clean, precise pruning that supports the tree's natural form.</p></div>
+          <div class="proc-step"><div class="ring">④</div><h4>Clean-Up</h4><p>All clippings and branches are hauled away when we're finished.</p></div>
+        </div>
+      </div>
+      <aside class="svc-side" data-reveal>
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="#service-tree-removal">Tree Removal <span>→</span></a></li>
+          <li><a href="#service-tree-trimming" class="active">Tree Trimming <span>→</span></a></li>
+          <li><a href="#service-storm-damage">Storm Damage <span>→</span></a></li>
+          <li><a href="#service-tree-care">Tree Care <span>→</span></a></li>
+        </ul>
+        <h4>Ready For A Trim?</h4>
+        <p style="color:var(--moss-light); font-size:.86rem; font-weight:300; margin-bottom:18px;">Free estimates within 25 miles of Green Ridge, Sedalia, MO.</p>
+        <a href="tel:16602213361" class="btn btn-primary" style="width:100%; justify-content:center; margin-bottom:12px;">Call (660) 221-3361</a>
+        <a href="#contact" class="btn btn-outline" style="width:100%; justify-content:center;">Request Online</a>
+      </aside>
+    </div>
+  </section>
+</section>
+
+<!-- ============================================================ -->
+<!-- SERVICE DETAIL: STORM DAMAGE -->
+<!-- ============================================================ -->
+<section class="page" id="page-service-storm-damage">
+  <div class="svc-hero" style="background-image:url('https://irp.cdn-website.com/436a5504/dms3rep/multi/opt/IMG_1643-1920w.jpg');">
+    <div class="wrap">
+      <div class="breadcrumb"><a href="#home">Home</a> / <a href="#services">Services</a> / Storm Damage</div>
+      <span class="eyebrow" style="color:var(--timber-light);">Service 03</span>
+      <h1>Storm Damage</h1>
+    </div>
+  </div>
+  <section>
+    <div class="wrap svc-body">
+      <div data-reveal>
+        <span class="eyebrow">Emergency Response</span>
+        <h2 style="margin-top:14px;">Fast, safe clean-up after severe weather</h2>
+        <p style="margin-top:18px;">High winds, ice and severe storms can bring down limbs — or entire trees — with little warning. When that happens, we're available for emergency response to clear hazards and get your property safe again quickly.</p>
+        <p>We handle everything from a single fallen limb blocking a driveway to a full tree down on a structure, prioritizing safety and a fast turnaround.</p>
+        <img src="https://irp.cdn-website.com/436a5504/dms3rep/multi/opt/IMG_1669-e454f43b-1920w.jpeg" style="width:100%; height:300px; object-fit:cover; border-radius:2px; margin:26px 0;" alt="Fallen tree branch cleanup after a storm" />
+        <h3 style="font-size:1.2rem;">What's included</h3>
+        <ul class="svc-feature-list">
+          <li><span class="chk">✓</span> Emergency &amp; after-hours availability</li>
+          <li><span class="chk">✓</span> Removal of fallen trees and limbs</li>
+          <li><span class="chk">✓</span> Hazard-tree assessment after severe weather</li>
+          <li><span class="chk">✓</span> Debris haul-away and property clean-up</li>
+          <li><span class="chk">✓</span> Insurance-friendly documentation on request</li>
+        </ul>
+        <div class="svc-process">
+          <div class="proc-step"><div class="ring">①</div><h4>Emergency Call</h4><p>Reach us any time — storm damage doesn't keep business hours.</p></div>
+          <div class="proc-step"><div class="ring">②</div><h4>Assess Hazards</h4><p>We identify any unsafe limbs or leaning trees before work begins.</p></div>
+          <div class="proc-step"><div class="ring">③</div><h4>Clear the Damage</h4><p>Fallen trees and limbs are removed safely and efficiently.</p></div>
+          <div class="proc-step"><div class="ring">④</div><h4>Restore the Property</h4><p>Full debris clean-up so your yard is safe and usable again.</p></div>
+        </div>
+      </div>
+      <aside class="svc-side" data-reveal>
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="#service-tree-removal">Tree Removal <span>→</span></a></li>
+          <li><a href="#service-tree-trimming">Tree Trimming <span>→</span></a></li>
+          <li><a href="#service-storm-damage" class="active">Storm Damage <span>→</span></a></li>
+          <li><a href="#service-tree-care">Tree Care <span>→</span></a></li>
+        </ul>
+        <h4>Storm Damage? Call Now.</h4>
+        <p style="color:var(--moss-light); font-size:.86rem; font-weight:300; margin-bottom:18px;">Emergency services available across Green Ridge &amp; Sedalia, MO.</p>
+        <a href="tel:16602213361" class="btn btn-primary" style="width:100%; justify-content:center; margin-bottom:12px;">Call (660) 221-3361</a>
+        <a href="#contact" class="btn btn-outline" style="width:100%; justify-content:center;">Request Online</a>
+      </aside>
+    </div>
+  </section>
+</section>
+
+<!-- ============================================================ -->
+<!-- SERVICE DETAIL: TREE CARE -->
+<!-- ============================================================ -->
+<section class="page" id="page-service-tree-care">
+  <div class="svc-hero" style="background-image:url('https://irp.cdn-website.com/436a5504/dms3rep/multi/opt/IMG_1667-1920w.jpg');">
+    <div class="wrap">
+      <div class="breadcrumb"><a href="#home">Home</a> / <a href="#services">Services</a> / Tree Care</div>
+      <span class="eyebrow" style="color:var(--timber-light);">Service 04</span>
+      <h1>Tree Care</h1>
+    </div>
+  </div>
+  <section>
+    <div class="wrap svc-body">
+      <div data-reveal>
+        <span class="eyebrow">Long-Term Health</span>
+        <h2 style="margin-top:14px;">Keeping your trees healthy, disease-free &amp; strong</h2>
+        <p style="margin-top:18px;">Healthy trees don't happen by accident. Our ongoing tree care service is built to catch problems early — disease, pests, poor structure — before they turn into an expensive removal.</p>
+        <p>We also provide seasonal mulch and firewood as part of a full-service approach to keeping your property looking its best year-round.</p>
+        <img src="https://irp.cdn-website.com/436a5504/dms3rep/multi/opt/IMG_1640-1920w.jpeg" style="width:100%; height:300px; object-fit:cover; border-radius:2px; margin:26px 0;" alt="Tree care and maintenance service" />
+        <h3 style="font-size:1.2rem;">What's included</h3>
+        <ul class="svc-feature-list">
+          <li><span class="chk">✓</span> Tree health assessments &amp; disease prevention</li>
+          <li><span class="chk">✓</span> Structural support &amp; young-tree training</li>
+          <li><span class="chk">✓</span> Seasonal mulch delivery</li>
+          <li><span class="chk">✓</span> Seasonal firewood available</li>
+          <li><span class="chk">✓</span> Ongoing maintenance plans for residential &amp; commercial properties</li>
+        </ul>
+        <div class="svc-process">
+          <div class="proc-step"><div class="ring">①</div><h4>Health Check</h4><p>We inspect for signs of disease, pests or structural weakness.</p></div>
+          <div class="proc-step"><div class="ring">②</div><h4>Care Plan</h4><p>We recommend the right care schedule for your specific trees.</p></div>
+          <div class="proc-step"><div class="ring">③</div><h4>Ongoing Maintenance</h4><p>Regular visits keep your trees strong through every season.</p></div>
+          <div class="proc-step"><div class="ring">④</div><h4>Mulch &amp; Firewood</h4><p>We supply seasonal mulch and firewood to round out your care.</p></div>
+        </div>
+      </div>
+      <aside class="svc-side" data-reveal>
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="#service-tree-removal">Tree Removal <span>→</span></a></li>
+          <li><a href="#service-tree-trimming">Tree Trimming <span>→</span></a></li>
+          <li><a href="#service-storm-damage">Storm Damage <span>→</span></a></li>
+          <li><a href="#service-tree-care" class="active">Tree Care <span>→</span></a></li>
+        </ul>
+        <h4>Give Your Trees Some Care</h4>
+        <p style="color:var(--moss-light); font-size:.86rem; font-weight:300; margin-bottom:18px;">Free estimates within 25 miles of Green Ridge, Sedalia, MO.</p>
+        <a href="tel:16602213361" class="btn btn-primary" style="width:100%; justify-content:center; margin-bottom:12px;">Call (660) 221-3361</a>
+        <a href="#contact" class="btn btn-outline" style="width:100%; justify-content:center;">Request Online</a>
+      </aside>
+    </div>
+  </section>
+</section>
+
+<!-- ============================================================ -->
+<!-- GALLERY PAGE -->
+<!-- ============================================================ -->
+<section class="page" id="page-gallery">
+  <div class="svc-hero" style="background-image:url('https://irp.cdn-website.com/436a5504/dms3rep/multi/opt/IMG_1643-1920w.jpg');">
+    <div class="wrap">
+      <div class="breadcrumb"><a href="#home">Home</a> &nbsp;/&nbsp; Gallery</div>
+      <span class="eyebrow" style="color:var(--timber-light);">Our Work</span>
+      <h1>Before &amp; After Gallery</h1>
+    </div>
+  </div>
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Recent Projects</span>
+        <h2>See the difference for yourself</h2>
+        <p>A look at real jobs completed across Green Ridge and Sedalia, MO.</p>
+      </div>
+      <div class="gallery-grid" data-reveal>
+        <div class="g-item"><span class="tag">Before</span><img src="https://irp.cdn-website.com/436a5504/dms3rep/multi/opt/IMG_1640-1920w.jpeg" alt="Before tree service project" /></div>
+        <div class="g-item"><span class="tag">After</span><img src="https://irp.cdn-website.com/436a5504/dms3rep/multi/opt/IMG_1643-1920w.jpg" alt="After tree service project" /></div>
+        <div class="g-item"><span class="tag">Before</span><img src="https://irp.cdn-website.com/436a5504/dms3rep/multi/opt/IMG_1667-1920w.jpg" alt="Before storm cleanup project" /></div>
+        <div class="g-item"><span class="tag">After</span><img src="https://irp.cdn-website.com/436a5504/dms3rep/multi/opt/IMG_1669-e454f43b-1920w.jpeg" alt="After storm cleanup project" /></div>
+        <div class="g-item"><img src="https://lirp.cdn-website.com/436a5504/dms3rep/multi/opt/IMG_1669-1920w.jpeg" alt="Completed tree service project" /></div>
+        <div class="g-item"><img src="https://irp.cdn-website.com/436a5504/dms3rep/multi/opt/chainsaw-v2-1920w.png" style="object-fit:contain; background:#0f1611;" alt="Tree removal equipment" /></div>
+      </div>
+      <div style="text-align:center; margin-top:46px;">
+        <a href="#contact" class="btn btn-primary">Start Your Project</a>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- ============================================================ -->
+<!-- TESTIMONIALS PAGE -->
+<!-- ============================================================ -->
+<section class="page" id="page-testimonials">
+  <div class="svc-hero" style="background-image:url('https://irp.cdn-website.com/436a5504/dms3rep/multi/opt/IMG_1669-e454f43b-1920w.jpeg');">
+    <div class="wrap">
+      <div class="breadcrumb"><a href="#home">Home</a> &nbsp;/&nbsp; Testimonials</div>
+      <span class="eyebrow" style="color:var(--timber-light);">Customer Reviews</span>
+      <h1>What our customers are saying</h1>
+    </div>
+  </div>
+  <section class="section-alt">
+    <div class="wrap">
+      <div class="testi-grid" data-reveal>
+        <div class="testi-card"><div class="stars">★★★★★</div><p class="quote">Removed a massive dead oak just feet from our roof without a scratch on the house. Cleaned up every branch before they left.</p><div class="testi-who"><div class="testi-avatar">S</div><div><strong>Sarah M.</strong><span>Sedalia, MO</span></div></div></div>
+        <div class="testi-card"><div class="stars">★★★★★</div><p class="quote">Called after a storm knocked a limb onto our fence and they were out the next morning. Fast, fair, and friendly.</p><div class="testi-who"><div class="testi-avatar">M</div><div><strong>Mike T.</strong><span>Green Ridge, MO</span></div></div></div>
+        <div class="testi-card"><div class="stars">★★★★★</div><p class="quote">Great trimming job on our maples — they explained exactly what they'd cut and why before starting. Very professional.</p><div class="testi-who"><div class="testi-avatar">D</div><div><strong>Diane R.</strong><span>Sedalia, MO</span></div></div></div>
+        <div class="testi-card"><div class="stars">★★★★★</div><p class="quote">Fair pricing and they hauled everything away, including an old stump we'd been putting off for years. Highly recommend.</p><div class="testi-who"><div class="testi-avatar">J</div><div><strong>James K.</strong><span>Green Ridge, MO</span></div></div></div>
+        <div class="testi-card"><div class="stars">★★★★★</div><p class="quote">On time, respectful of our property, and the yard looked better than before they arrived. Will be calling them again.</p><div class="testi-who"><div class="testi-avatar">A</div><div><strong>Amanda P.</strong><span>Sedalia, MO</span></div></div></div>
+        <div class="testi-card"><div class="stars">★★★★★</div><p class="quote">Been using them for yearly trimming on our property line and they're always thorough and easy to schedule with.</p><div class="testi-who"><div class="testi-avatar">T</div><div><strong>Tom H.</strong><span>Green Ridge, MO</span></div></div></div>
+      </div>
+      <div style="text-align:center; margin-top:50px;">
+        <a href="https://g.page/r/CcTbxTa7GuzNEBM/" target="_blank" rel="noopener" class="btn btn-primary">Read More On Google</a>
+        <p style="margin-top:16px; color:var(--moss-light); font-size:.8rem;">Sample reviews shown for demonstration — connect your Google Business Profile to display live reviews.</p>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- ============================================================ -->
+<!-- FAQ PAGE -->
+<!-- ============================================================ -->
+<section class="page" id="page-faq">
+  <div class="svc-hero" style="background-image:url('https://irp.cdn-website.com/436a5504/dms3rep/multi/opt/IMG_1640-1920w.jpeg');">
+    <div class="wrap">
+      <div class="breadcrumb"><a href="#home">Home</a> &nbsp;/&nbsp; FAQs</div>
+      <span class="eyebrow" style="color:var(--timber-light);">Common Questions</span>
+      <h1>Frequently Asked Questions</h1>
+    </div>
+  </div>
+  <section>
+    <div class="wrap" style="max-width:900px;">
+      <div class="faq-item open">
+        <div class="faq-q"><h4>Do you offer free estimates?</h4><div class="plus"></div></div>
+        <div class="faq-a"><p>Yes — we provide free estimates for any property within 25 miles of Green Ridge, Sedalia, MO. Call (660) 221-3361 or fill out our contact form to schedule yours.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><h4>What areas do you serve?</h4><div class="plus"></div></div>
+        <div class="faq-a"><p>We're based in Green Ridge, MO and serve the greater Sedalia, MO area and surrounding communities within roughly a 25-mile radius.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><h4>Do you handle emergency storm damage?</h4><div class="plus"></div></div>
+        <div class="faq-a"><p>Yes, we're available for emergency services when storms bring down limbs or entire trees. Call us right away and we'll get to your property as quickly as possible.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><h4>Will you clean up and haul away the debris?</h4><div class="plus"></div></div>
+        <div class="faq-a"><p>Absolutely. Every removal, trim, and storm cleanup job includes full debris haul-away — we don't leave a job until your property is clean.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><h4>Do you work with both homeowners and businesses?</h4><div class="plus"></div></div>
+        <div class="faq-a"><p>Yes, we provide tree services for both residential and commercial clients throughout the Green Ridge and Sedalia area.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><h4>Do you sell mulch or firewood?</h4><div class="plus"></div></div>
+        <div class="faq-a"><p>Yes, we provide seasonal mulch and firewood as part of our full-service approach to tree care — ask us about availability.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cta-banner">
+    <div class="wrap">
+      <span class="eyebrow">Still Have Questions?</span>
+      <h2>We're happy to talk through your project</h2>
+      <div class="btnrow">
+        <a href="tel:16602213361" class="btn btn-primary">Call (660) 221-3361</a>
+        <a href="#contact" class="btn btn-outline">Contact Us</a>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- ============================================================ -->
+<!-- CONTACT PAGE -->
+<!-- ============================================================ -->
+<section class="page" id="page-contact">
+  <div class="svc-hero" style="background-image:url('https://irp.cdn-website.com/436a5504/dms3rep/multi/opt/IMG_1669-e454f43b-1920w.jpeg');">
+    <div class="wrap">
+      <div class="breadcrumb"><a href="#home">Home</a> &nbsp;/&nbsp; Contact Us</div>
+      <span class="eyebrow" style="color:var(--timber-light);">Get In Touch</span>
+      <h1>Contact Big Branch Tree Company</h1>
+    </div>
+  </div>
+  <section class="section-alt">
+    <div class="wrap contact-grid">
+      <div data-reveal>
+        <span class="eyebrow">Contact Information</span>
+        <h2 style="margin-top:14px;">We'd love to hear from you</h2>
+        <p style="color:var(--moss-light); font-weight:300; margin-top:14px;">Reach out for a free estimate or to ask any questions about our services. We serve properties within 25 miles of Green Ridge, Sedalia, MO.</p>
+
+        <div class="contact-card"><div class="ico">📍</div><div><strong>Address</strong><span>Green Ridge, MO 65332</span></div></div>
+        <div class="contact-card"><div class="ico">📞</div><div><strong>Phone</strong><br><a href="tel:16602213361">(660) 221-3361</a></div></div>
+        <div class="contact-card"><div class="ico">✉️</div><div><strong>Email</strong><br><a href="mailto:Bigbranchtreecompany@gmail.com">Bigbranchtreecompany@gmail.com</a></div></div>
+        <div class="contact-card">
+          <div class="ico">🕒</div>
+          <div>
+            <strong>Business Hours</strong>
+            <div class="footer-hours-row" style="padding:0; margin-top:4px;"><span>Mon – Fri</span><span>7:30 AM – 6:30 PM</span></div>
+            <div class="footer-hours-row" style="padding:0;"><span>Saturday</span><span>9:00 AM – 12:30 PM</span></div>
+            <div class="footer-hours-row" style="padding:0;"><span>Sunday</span><span>Closed</span></div>
+          </div>
+        </div>
+
+        <div class="map-box">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d760654.1034023464!2d-93.13120095056098!3d38.418924890588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2462bf19d84930a3%3A0xcdec1abb36c5dbc4!2sBig%20Branch%20Tree%20Company%20LLC!5e1!3m2!1sen!2s!4v1786728721410!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+      </div>
+
+      <div data-reveal>
+        <div class="form-box">
+          <h3>Request A Free Estimate</h3>
+          <form onsubmit="return false;">
+            <div class="form-row">
+              <input type="text" placeholder="First Name" required />
+              <input type="text" placeholder="Last Name" required />
+            </div>
+            <div class="form-row">
+              <input type="tel" placeholder="Phone Number" required />
+              <input type="email" placeholder="Email Address" required />
+            </div>
+            <select style="margin-bottom:16px;">
+              <option>Select a Service</option>
+              <option>Tree Removal</option>
+              <option>Tree Trimming</option>
+              <option>Storm Damage</option>
+              <option>Tree Care</option>
+              <option>Other</option>
+            </select>
+            <textarea placeholder="Tell us about your project..."></textarea>
+            <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+</main>
+
+<!-- ============================================================ -->
+<!-- FOOTER -->
+<!-- ============================================================ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand">
+          <img src="https://irp.cdn-website.com/436a5504/dms3rep/multi/opt/bigbranchtreecompany_logo-1920w.png" alt="Big Branch Tree Company logo" style="width:52px; height:52px; object-fit:contain;" />
+          <span class="btext"><span class="b1" style="color:var(--cream);">Big Branch Tree Co.</span><span class="b2">LLC · Green Ridge, MO</span></span>
+        </div>
+        <p>Family-owned &amp; operated tree services for Green Ridge, Sedalia, MO and the surrounding area. Safety-first crews, honest estimates, complete clean-up — every job.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/people/Big-Branch-Tree-Company-LLC/61568531590812/" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+          <a href="https://www.homeadvisor.com/rated.BigBranchTreeCompany.107385836.html" target="_blank" rel="noopener" aria-label="HomeAdvisor">H</a>
+          <a href="https://www.bbb.org/us/mo/green-ridge/profile/tree-service/big-branch-tree-company-0734-1000029331" target="_blank" rel="noopener" aria-label="BBB">B</a>
+          <a href="https://g.page/r/CcTbxTa7GuzNEBM/" target="_blank" rel="noopener" aria-label="Google">G</a>
+        </div>
+      </div>
+
+      <div>
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5>Our Services</h5>
+        <ul>
+          <li><a href="#service-tree-removal">Tree Removal</a></li>
+          <li><a href="#service-tree-trimming">Tree Trimming</a></li>
+          <li><a href="#service-storm-damage">Storm Damage</a></li>
+          <li><a href="#service-tree-care">Tree Care</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5>Contact &amp; Hours</h5>
+        <ul>
+          <li>Green Ridge, MO 65332</li>
+          <li><a href="tel:16602213361">(660) 221-3361</a></li>
+          <li><a href="mailto:Bigbranchtreecompany@gmail.com">Bigbranchtreecompany@gmail.com</a></li>
+        </ul>
+        <div class="footer-hours-row"><span>Mon – Fri</span><span>7:30–6:30</span></div>
+        <div class="footer-hours-row"><span>Saturday</span><span>9:00–12:30</span></div>
+        <div class="footer-hours-row"><span>Sunday</span><span>Closed</span></div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Big Branch Tree Company LLC. All rights reserved.</span>
+      <span>Green Ridge · Sedalia, MO — Professional Tree Services</span>
+    </div>
+  </div>
+</footer>
+
+<a href="tel:16602213361" class="call-fab" aria-label="Call Big Branch Tree Company">📞</a>
+
+<script>
+(function(){
+  // ---------- preloader ----------
+  window.addEventListener('load', function(){
+    setTimeout(function(){
+      document.getElementById('preloader').classList.add('hide');
+    }, 2100);
+  });
+
+  // ---------- header scroll state ----------
+  var header = document.getElementById('siteHeader');
+  function onScroll(){
+    if(window.scrollY > 40){ header.classList.add('solid'); }
+    else { header.classList.remove('solid'); }
+  }
+  window.addEventListener('scroll', onScroll); onScroll();
+
+  // ---------- mobile nav ----------
+  var burger = document.getElementById('burgerBtn');
+  var mobileNav = document.getElementById('mobileNav');
+  var overlay = document.getElementById('overlay');
+  function closeMobile(){ mobileNav.classList.remove('open'); overlay.classList.remove('open'); }
+  burger.addEventListener('click', function(){
+    mobileNav.classList.toggle('open'); overlay.classList.toggle('open');
+  });
+  overlay.addEventListener('click', closeMobile);
+  mobileNav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMobile); });
+
+  // ---------- router ----------
+  var pages = document.querySelectorAll('.page');
+  var navLinks = document.querySelectorAll('.nav-link');
+  var validRoutes = ['home','about','services','service-tree-removal','service-tree-trimming','service-storm-damage','service-tree-care','gallery','testimonials','faq','contact'];
+
+  function routeToTopLevel(route){
+    if(route.indexOf('service-') === 0) return 'services';
+    return route;
+  }
+
+  function render(){
+    var hash = (window.location.hash || '#home').replace('#','');
+    if(validRoutes.indexOf(hash) === -1){ hash = 'home'; }
+    pages.forEach(function(p){ p.classList.remove('active'); });
+    var target = document.getElementById('page-' + hash);
+    if(target){ target.classList.add('active'); }
+
+    var topLevel = routeToTopLevel(hash);
+    navLinks.forEach(function(a){
+      a.classList.toggle('active', a.dataset.route === topLevel);
+    });
+
+    window.scrollTo({top:0, behavior:'instant' in window ? 'instant' : 'auto'});
+    revealOnScroll();
+  }
+  window.addEventListener('hashchange', render);
+  render();
+
+  // ---------- scroll reveal ----------
+  function revealOnScroll(){
+    var items = document.querySelectorAll('[data-reveal]:not(.in)');
+    var winH = window.innerHeight;
+    items.forEach(function(el){
+      var top = el.getBoundingClientRect().top;
+      if(top < winH - 80){ el.classList.add('in'); }
+    });
+  }
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('resize', revealOnScroll);
+
+  // ---------- faq accordion ----------
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    item.querySelector('.faq-q').addEventListener('click', function(){
+      var isOpen = item.classList.contains('open');
+      item.parentElement.querySelectorAll('.faq-item').forEach(function(i){ i.classList.remove('open'); });
+      if(!isOpen){ item.classList.add('open'); }
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
